@@ -1,15 +1,17 @@
-export function add(numbers) {
+function add(numbers) {
   return numbers.reduce((sum, num) => sum + num, 0);
 }
 
-export function subtract(numbers) {
+function subtract(numbers) {
   return numbers.slice(1).reduce((res, num) => res - num, numbers[0]);
 }
 
-export function multiply(numbers) {
+function multiply(numbers) {
   return numbers.reduce((res, num) => res * num, 1);
 }
 
-export function divide(numbers) {
+function divide(numbers) {
   return numbers.slice(1).reduce((res, num) => res / num, numbers[0]);
 }
+
+module.exports = { add, subtract, multiply, divide };
